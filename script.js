@@ -33,3 +33,24 @@ setInterval(atualizarContador, 1000);
 
 // roda na hora que abrir o site
 atualizarContador();
+
+function criarCoracao() {
+  const heartsContainer = document.getElementById("hearts");
+
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerText = "💖";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+  heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+
+  heartsContainer.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+// cria corações constantemente
+setInterval(criarCoracao, 300);
