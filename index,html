@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Para o Amor da Minha Vida ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Feliz Dia dos Namorados 💖</h1>
+  <p id="mensagem">Você é a melhor parte da minha vida!</p>
+
+  <img src="assets/foto1.jpg" class="foto">
+
+  <button onclick="mostrarSurpresa()">Clique para surpresa 💌</button>
+
+  <p id="surpresa" class="hidden">
+    Eu te amo mais a cada dia! ❤️
+  </p>
+
+  <p id="contador"></p>
+
+  <audio autoplay loop>
+    <source src="assets/musica.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
