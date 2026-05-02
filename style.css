@@ -7,7 +7,6 @@ body {
   color: white;
 }
 
-/* container centralizado */
 .container {
   margin-top: 50px;
   padding: 20px;
@@ -16,29 +15,22 @@ body {
   margin-right: auto;
 }
 
-/* título */
 h1 {
   font-size: 26px;
-  margin-bottom: 10px;
 }
 
-/* texto */
 p {
   font-size: 16px;
-  margin: 10px 0;
 }
 
-/* imagem */
 .foto {
   width: 90%;
   max-width: 280px;
   height: auto;
   border-radius: 20px;
   margin: 15px 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* botão */
 button {
   width: 80%;
   max-width: 250px;
@@ -57,21 +49,22 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* surpresa com animação */
+/* 🔥 SURPRESA CONTROLADA (corrigido) */
 #surpresa {
-  opacity: 1;
-  transform: translateY(0);
-  transition: 0.6s ease;
-}
-
-/* escondido */
-.hidden {
   opacity: 0;
   transform: translateY(20px);
+  transition: 0.6s ease;
   pointer-events: none;
 }
 
-/* corações no fundo */
+/* quando clicar */
+#surpresa.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* 💖 corações */
 .hearts {
   position: fixed;
   top: 0;
@@ -88,27 +81,21 @@ button:hover {
   bottom: -20px;
   font-size: 20px;
   animation: subir 5s linear infinite;
-  opacity: 0.8;
 }
 
 @keyframes subir {
   0% {
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
     opacity: 0.8;
   }
   100% {
-    transform: translateY(-100vh) scale(1.5);
+    transform: translateY(-100vh);
     opacity: 0;
   }
 }
 
-/* 📱 ajuste para celular */
+/* 📱 mobile */
 @media (max-width: 600px) {
-  .container {
-    margin-top: 30px;
-    padding: 15px;
-  }
-
   h1 {
     font-size: 20px;
   }
@@ -117,12 +104,7 @@ button:hover {
     font-size: 14px;
   }
 
-  .foto {
-    width: 95%;
-  }
-
   button {
     width: 90%;
-    font-size: 14px;
   }
 }
