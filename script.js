@@ -2,6 +2,7 @@ function mostrarSurpresa() {
   document.getElementById("surpresa").classList.remove("hidden");
 }
 
+// ⏳ contador em tempo real
 function atualizarContador() {
   const inicio = new Date("2024-07-07T00:00:00");
   const agora = new Date();
@@ -25,15 +26,13 @@ function atualizarContador() {
 
   document.getElementById("contador").innerText =
     `Estamos juntos há ${anos} anos, ${meses} meses, ${dias} dias, ` +
-    `${horas}h ${minutos}min ${segundos}s !`;
+    `${horas}h ${minutos}min ${segundos}s ❤️`;
 }
 
-// atualiza a cada 1 segundo
 setInterval(atualizarContador, 1000);
-
-// roda na hora que abrir o site
 atualizarContador();
 
+// 💖 corações
 function criarCoracao() {
   const heartsContainer = document.getElementById("hearts");
 
@@ -47,10 +46,7 @@ function criarCoracao() {
 
   heartsContainer.appendChild(heart);
 
-  setTimeout(() => {
-    heart.remove();
-  }, 5000);
+  setTimeout(() => heart.remove(), 5000);
 }
 
-// cria corações constantemente
 setInterval(criarCoracao, 300);
