@@ -7,7 +7,7 @@ body {
   color: white;
 }
 
-/* container centralizado e adaptável */
+/* container centralizado */
 .container {
   margin-top: 50px;
   padding: 20px;
@@ -16,40 +16,59 @@ body {
   margin-right: auto;
 }
 
-/* imagem responsiva */
+/* título */
+h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* texto */
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* imagem */
 .foto {
   width: 90%;
   max-width: 280px;
   height: auto;
   border-radius: 20px;
-  margin: 20px 0;
+  margin: 15px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* botão adaptável */
+/* botão */
 button {
   width: 80%;
   max-width: 250px;
   padding: 12px;
-  background: red;
+  background: #ff4d6d;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 16px;
+  transition: 0.3s;
 }
 
-/* texto */
-h1 {
-  font-size: 26px;
+button:hover {
+  background: #ff1f4b;
+  transform: scale(1.05);
 }
 
-p {
-  font-size: 16px;
+/* surpresa com animação */
+#surpresa {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.6s ease;
 }
 
-/* esconder elemento */
+/* escondido */
 .hidden {
-  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
 }
 
 /* corações no fundo */
@@ -83,7 +102,7 @@ p {
   }
 }
 
-/* 🔥 AJUSTE ESPECÍFICO PRA CELULAR */
+/* 📱 ajuste para celular */
 @media (max-width: 600px) {
   .container {
     margin-top: 30px;
