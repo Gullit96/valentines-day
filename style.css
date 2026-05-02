@@ -1,0 +1,29 @@
+body {
+  background: linear-gradient(#ff9a9e, #fad0c4);
+  font-family: Arial;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.foto {
+  width: 250px;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
