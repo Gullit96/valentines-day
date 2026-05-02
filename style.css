@@ -1,40 +1,67 @@
 body {
+  margin: 0;
+  padding: 0;
   background: linear-gradient(#ff9a9e, #fad0c4);
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   text-align: center;
   color: white;
 }
 
+/* container centralizado e adaptável */
 .container {
   margin-top: 50px;
+  padding: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* imagem responsiva */
 .foto {
-  width: 250px;
+  width: 90%;
+  max-width: 280px;
+  height: auto;
   border-radius: 20px;
-  margin: 20px;
+  margin: 20px 0;
 }
 
+/* botão adaptável */
 button {
-  padding: 10px 20px;
+  width: 80%;
+  max-width: 250px;
+  padding: 12px;
   background: red;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 16px;
 }
 
+/* texto */
+h1 {
+  font-size: 26px;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* esconder elemento */
 .hidden {
   display: none;
 }
+
+/* corações no fundo */
 .hearts {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
   overflow: hidden;
+  z-index: -1;
 }
 
 .heart {
@@ -53,5 +80,30 @@ button {
   100% {
     transform: translateY(-100vh) scale(1.5);
     opacity: 0;
+  }
+}
+
+/* 🔥 AJUSTE ESPECÍFICO PRA CELULAR */
+@media (max-width: 600px) {
+  .container {
+    margin-top: 30px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .foto {
+    width: 95%;
+  }
+
+  button {
+    width: 90%;
+    font-size: 14px;
   }
 }
