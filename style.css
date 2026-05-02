@@ -15,13 +15,8 @@ body {
   margin-right: auto;
 }
 
-h1 {
-  font-size: 26px;
-}
-
-p {
-  font-size: 16px;
-}
+h1 { font-size: 26px; }
+p { font-size: 16px; }
 
 .foto {
   width: 90%;
@@ -31,6 +26,7 @@ p {
   margin: 15px 0;
 }
 
+/* botão */
 button {
   width: 80%;
   max-width: 250px;
@@ -43,28 +39,27 @@ button {
   font-size: 16px;
   transition: 0.3s;
 }
+button:hover { background: #ff1f4b; transform: scale(1.05); }
 
-button:hover {
-  background: #ff1f4b;
-  transform: scale(1.05);
-}
-
-/* 🔥 SURPRESA CONTROLADA (corrigido) */
+/* SURPRESA: começa invisível via opacity/transform (permitindo transição) */
 #surpresa {
   opacity: 0;
   transform: translateY(20px);
   transition: 0.6s ease;
   pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
 }
 
-/* quando clicar */
+/* quando mostrar */
 #surpresa.mostrar {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+  max-height: 2000px; /* suficientemente grande para conteúdo */
 }
 
-/* 💖 corações */
+/* corações */
 .hearts {
   position: fixed;
   top: 0;
@@ -84,30 +79,16 @@ button:hover {
 }
 
 @keyframes subir {
-  0% {
-    transform: translateY(0);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(-100vh);
-    opacity: 0;
-  }
+  0% { transform: translateY(0); opacity: 0.8; }
+  100% { transform: translateY(-100vh); opacity: 0; }
 }
 
-/* 📱 mobile */
+/* mobile */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  button {
-    width: 90%;
-  }
+  h1 { font-size: 20px; }
+  p { font-size: 14px; }
+  button { width: 90%; }
 }
-.hidden {
-  display: none;
-}
+
+/* .hidden agora apenas marca estado inicial, sem display:none */
+.hidden { /* vazio ou usado apenas como marcador */ }
